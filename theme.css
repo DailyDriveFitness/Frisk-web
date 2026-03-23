@@ -1,0 +1,306 @@
+/* Frisk theme — logo colors #1A2E24 + #6C5CE7; light / dark via [data-theme] on <html> */
+:root {
+  color-scheme: light;
+  /* Logo core (unchanged hex) */
+  --brand-hex: #1a2e24;
+  --primary-hex: #6c5ce7;
+  --primary-dark-hex: #5548d9;
+  /* Tunable RGB for borders / glows that follow the active theme */
+  --ink-rgb: 26, 46, 36;
+  --accent-rgb: 108, 92, 231;
+  --brand: var(--brand-hex);
+  --brand-mid: #243d32;
+  --brand-deep: #0f1612;
+  --brand-soft: rgba(var(--ink-rgb), 0.08);
+  --primary: var(--primary-hex);
+  --primary-dark: var(--primary-dark-hex);
+  --primary-soft: rgba(var(--accent-rgb), 0.1);
+  --primary-line: rgba(var(--accent-rgb), 0.45);
+  --primary-glow: rgba(var(--accent-rgb), 0.15);
+  --text: #15221a;
+  --text-secondary: #3d5248;
+  --text-tertiary: #5f7268;
+  --surface: #ffffff;
+  --surface-muted: #eef2ef;
+  --surface-elevated: #f7faf8;
+  --page-bg: #e4ebe6;
+  --page-tint: #e4e8f6;
+  --border: rgba(var(--ink-rgb), 0.1);
+  --border-hairline: rgba(var(--ink-rgb), 0.07);
+  --shadow-sheet: 0 1px 0 rgba(255, 255, 255, 0.88) inset, 0 32px 64px -28px rgba(var(--ink-rgb), 0.12),
+    0 12px 28px -18px rgba(var(--ink-rgb), 0.06);
+  --shadow-float: 0 20px 50px -24px rgba(var(--ink-rgb), 0.14), 0 8px 20px -12px rgba(var(--accent-rgb), 0.12);
+  --shadow-card: 0 2px 12px rgba(var(--ink-rgb), 0.05);
+  --shadow-soft: 0 18px 40px -28px rgba(var(--ink-rgb), 0.1);
+  --hero-inset: rgba(255, 255, 255, 0.55);
+  --btn-secondary-bg: rgba(255, 255, 255, 0.78);
+  --chrome-inset: rgba(255, 255, 255, 0.55);
+  --chrome-inset-strong: rgba(255, 255, 255, 0.95);
+  --chrome-surface: rgba(255, 255, 255, 0.88);
+  --lang-chrome-bg: rgba(255, 255, 255, 0.62);
+  --lang-chrome-border: rgba(var(--ink-rgb), 0.09);
+  --lang-slot-hover: rgba(var(--ink-rgb), 0.05);
+  --lang-slot-active: rgba(255, 255, 255, 0.94);
+  --lang-indicator-glow: rgba(var(--accent-rgb), 0.22);
+  --lang-footer-slot: rgba(255, 255, 255, 0.48);
+  --backdrop-scrim: rgba(15, 22, 18, 0.42);
+  --phone-chassis-shine: rgba(255, 255, 255, 0.12);
+  --phone-chassis-a: #2d3f35;
+  --phone-chassis-b: var(--brand-hex);
+  --phone-chassis-c: #0f1612;
+  --phone-screen-bg: linear-gradient(188deg, #fcfdfc 0%, #e8ebe8 48%, #dce0dc 100%);
+  --phone-screen-border: rgba(255, 255, 255, 0.16);
+  --showcase-spot: rgba(255, 255, 255, 0.55);
+  --page-gradient-spot1: rgba(var(--ink-rgb), 0.045);
+  --page-gradient-spot2: rgba(var(--accent-rgb), 0.08);
+  --page-gradient-spot3: rgba(var(--accent-rgb), 0.05);
+  --noise-opacity: 0.35;
+  --showcase-bg-mid: var(--surface-elevated);
+  --placeholder-surface: rgba(253, 253, 252, 0.95);
+  --placeholder-surface-2: rgba(241, 243, 241, 0.98);
+  --header-bg-a: rgba(255, 255, 255, 0.82);
+  --header-bg-b: rgba(253, 253, 252, 0.76);
+  --hero-bg-a: #fefffe;
+  --hero-bg-c: rgba(247, 248, 247, 0.98);
+  --trust-section-bg-a: rgba(255, 255, 255, 0.92);
+  --trust-section-bg-b: rgba(248, 249, 248, 0.88);
+  --trust-section-bg-c: rgba(237, 239, 252, 0.35);
+  --trust-item-bg: rgba(255, 255, 255, 0.78);
+  --trust-proof-bg: rgba(255, 255, 255, 0.52);
+  --feature-inset: rgba(255, 255, 255, 0.4);
+  --btn-primary-highlight: rgba(255, 255, 255, 0.22);
+  --btn-primary-highlight-hover: rgba(255, 255, 255, 0.25);
+  --phone-chrome-rim: rgba(255, 255, 255, 0.08);
+  --phone-notch-shine: rgba(255, 255, 255, 0.05);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ink-rgb: 206, 218, 210;
+  --accent-rgb: 168, 154, 245;
+  --brand: #d8e8df;
+  --brand-mid: #9fb5a8;
+  --brand-deep: #0a0f0c;
+  --brand-soft: rgba(216, 232, 223, 0.08);
+  --primary: #a89af5;
+  --primary-dark: #8f7eef;
+  --primary-soft: rgba(168, 154, 245, 0.12);
+  --primary-line: rgba(168, 154, 245, 0.5);
+  --primary-glow: rgba(168, 154, 245, 0.2);
+  --text: #e8f0eb;
+  --text-secondary: #a8b8ae;
+  --text-tertiary: #7d8f84;
+  --surface: #1a2420;
+  --surface-muted: #141c18;
+  --surface-elevated: #1f2b26;
+  --page-bg: #0f1512;
+  --page-tint: #121a22;
+  --border: rgba(216, 232, 223, 0.1);
+  --border-hairline: rgba(216, 232, 223, 0.06);
+  --shadow-sheet: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 32px 64px -28px rgba(0, 0, 0, 0.45),
+    0 12px 28px -18px rgba(0, 0, 0, 0.3);
+  --shadow-float: 0 20px 50px -24px rgba(0, 0, 0, 0.5), 0 8px 20px -12px rgba(108, 92, 231, 0.15);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 18px 40px -28px rgba(0, 0, 0, 0.4);
+  --hero-inset: rgba(255, 255, 255, 0.06);
+  --btn-secondary-bg: rgba(31, 43, 38, 0.85);
+  --chrome-inset: rgba(255, 255, 255, 0.06);
+  --chrome-inset-strong: rgba(255, 255, 255, 0.1);
+  --chrome-surface: rgba(31, 43, 38, 0.92);
+  --lang-chrome-bg: rgba(26, 36, 32, 0.75);
+  --lang-chrome-border: rgba(216, 232, 223, 0.1);
+  --lang-slot-hover: rgba(216, 232, 223, 0.06);
+  --lang-slot-active: rgba(31, 43, 38, 0.95);
+  --lang-indicator-glow: rgba(168, 154, 245, 0.25);
+  --lang-footer-slot: rgba(26, 36, 32, 0.72);
+  --backdrop-scrim: rgba(4, 8, 6, 0.72);
+  --phone-chassis-shine: rgba(255, 255, 255, 0.08);
+  --phone-chassis-a: #2a3830;
+  --phone-chassis-b: #1a2e24;
+  --phone-chassis-c: #070a08;
+  --phone-screen-bg: linear-gradient(188deg, #2a3530 0%, #1f2824 48%, #171f1c 100%);
+  --phone-screen-border: rgba(255, 255, 255, 0.08);
+  --showcase-spot: rgba(168, 154, 245, 0.06);
+  --page-gradient-spot1: rgba(0, 0, 0, 0.25);
+  --page-gradient-spot2: rgba(var(--accent-rgb), 0.07);
+  --page-gradient-spot3: rgba(var(--accent-rgb), 0.04);
+  --noise-opacity: 0.2;
+  --showcase-bg-mid: var(--surface-muted);
+  --placeholder-surface: rgba(31, 43, 38, 0.92);
+  --placeholder-surface-2: rgba(26, 36, 32, 0.96);
+  --header-bg-a: rgba(31, 43, 38, 0.94);
+  --header-bg-b: rgba(26, 36, 32, 0.88);
+  --hero-bg-a: var(--surface);
+  --hero-bg-c: var(--surface-muted);
+  --trust-section-bg-a: rgba(31, 43, 38, 0.92);
+  --trust-section-bg-b: rgba(26, 36, 32, 0.88);
+  --trust-section-bg-c: rgba(18, 26, 34, 0.45);
+  --trust-item-bg: rgba(26, 36, 32, 0.85);
+  --trust-proof-bg: rgba(20, 28, 24, 0.65);
+  --feature-inset: rgba(255, 255, 255, 0.06);
+  --btn-primary-highlight: rgba(255, 255, 255, 0.12);
+  --btn-primary-highlight-hover: rgba(255, 255, 255, 0.16);
+  --phone-chrome-rim: rgba(255, 255, 255, 0.06);
+  --phone-notch-shine: rgba(255, 255, 255, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
+    --ink-rgb: 206, 218, 210;
+    --accent-rgb: 168, 154, 245;
+    --brand: #d8e8df;
+    --brand-mid: #9fb5a8;
+    --brand-deep: #0a0f0c;
+    --brand-soft: rgba(216, 232, 223, 0.08);
+    --primary: #a89af5;
+    --primary-dark: #8f7eef;
+    --primary-soft: rgba(168, 154, 245, 0.12);
+    --primary-line: rgba(168, 154, 245, 0.5);
+    --primary-glow: rgba(168, 154, 245, 0.2);
+    --text: #e8f0eb;
+    --text-secondary: #a8b8ae;
+    --text-tertiary: #7d8f84;
+    --surface: #1a2420;
+    --surface-muted: #141c18;
+    --surface-elevated: #1f2b26;
+    --page-bg: #0f1512;
+    --page-tint: #121a22;
+    --border: rgba(216, 232, 223, 0.1);
+    --border-hairline: rgba(216, 232, 223, 0.06);
+    --shadow-sheet: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 32px 64px -28px rgba(0, 0, 0, 0.45),
+      0 12px 28px -18px rgba(0, 0, 0, 0.3);
+    --shadow-float: 0 20px 50px -24px rgba(0, 0, 0, 0.5), 0 8px 20px -12px rgba(108, 92, 231, 0.15);
+    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.35);
+    --shadow-soft: 0 18px 40px -28px rgba(0, 0, 0, 0.4);
+    --hero-inset: rgba(255, 255, 255, 0.06);
+    --btn-secondary-bg: rgba(31, 43, 38, 0.85);
+    --chrome-inset: rgba(255, 255, 255, 0.06);
+    --chrome-inset-strong: rgba(255, 255, 255, 0.1);
+    --chrome-surface: rgba(31, 43, 38, 0.92);
+    --lang-chrome-bg: rgba(26, 36, 32, 0.75);
+    --lang-chrome-border: rgba(216, 232, 223, 0.1);
+    --lang-slot-hover: rgba(216, 232, 223, 0.06);
+    --lang-slot-active: rgba(31, 43, 38, 0.95);
+    --lang-indicator-glow: rgba(168, 154, 245, 0.25);
+    --lang-footer-slot: rgba(26, 36, 32, 0.72);
+    --backdrop-scrim: rgba(4, 8, 6, 0.72);
+    --phone-chassis-shine: rgba(255, 255, 255, 0.08);
+    --phone-chassis-a: #2a3830;
+    --phone-chassis-b: #1a2e24;
+    --phone-chassis-c: #070a08;
+    --phone-screen-bg: linear-gradient(188deg, #2a3530 0%, #1f2824 48%, #171f1c 100%);
+    --phone-screen-border: rgba(255, 255, 255, 0.08);
+    --showcase-spot: rgba(168, 154, 245, 0.06);
+    --page-gradient-spot1: rgba(0, 0, 0, 0.25);
+    --page-gradient-spot2: rgba(var(--accent-rgb), 0.07);
+    --page-gradient-spot3: rgba(var(--accent-rgb), 0.04);
+    --noise-opacity: 0.2;
+    --showcase-bg-mid: var(--surface-muted);
+    --placeholder-surface: rgba(31, 43, 38, 0.92);
+    --placeholder-surface-2: rgba(26, 36, 32, 0.96);
+    --header-bg-a: rgba(31, 43, 38, 0.94);
+    --header-bg-b: rgba(26, 36, 32, 0.88);
+    --hero-bg-a: var(--surface);
+    --hero-bg-c: var(--surface-muted);
+    --trust-section-bg-a: rgba(31, 43, 38, 0.92);
+    --trust-section-bg-b: rgba(26, 36, 32, 0.88);
+    --trust-section-bg-c: rgba(18, 26, 34, 0.45);
+    --trust-item-bg: rgba(26, 36, 32, 0.85);
+    --trust-proof-bg: rgba(20, 28, 24, 0.65);
+    --feature-inset: rgba(255, 255, 255, 0.06);
+    --btn-primary-highlight: rgba(255, 255, 255, 0.12);
+    --btn-primary-highlight-hover: rgba(255, 255, 255, 0.16);
+    --phone-chrome-rim: rgba(255, 255, 255, 0.06);
+    --phone-notch-shine: rgba(255, 255, 255, 0.04);
+  }
+}
+
+/* Theme toggle — shared by marketing + legal pages */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
+  padding: 0.72rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--lang-chrome-border);
+  background: var(--lang-chrome-bg);
+  color: var(--brand);
+  cursor: pointer;
+  box-shadow:
+    0 1px 0 var(--chrome-inset-strong) inset,
+    0 6px 18px -10px rgba(var(--ink-rgb), 0.12);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  transition:
+    border-color 0.28s var(--ease-soft),
+    box-shadow 0.32s var(--ease-out),
+    background 0.28s var(--ease-soft),
+    transform 0.22s var(--ease-out);
+}
+
+@media (min-width: 720px) {
+  .theme-toggle {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0.62rem 0.75rem;
+  }
+}
+
+.theme-toggle:hover {
+  border-color: rgba(var(--accent-rgb), 0.28);
+  background: var(--lang-slot-active);
+  box-shadow:
+    0 1px 0 var(--chrome-inset-strong) inset,
+    0 10px 26px -12px rgba(var(--accent-rgb), 0.12);
+}
+
+.theme-toggle:active {
+  transform: scale(0.985);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.theme-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+}
+
+.theme-toggle__icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.legal-header-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: var(--s-3);
+  margin-bottom: var(--s-5);
+}
+
+.legal-header-bar .theme-toggle {
+  margin: 0;
+  max-width: none;
+  width: auto;
+  padding: 0.55rem 0.7rem;
+}
