@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../legal.css">
+  <link rel="stylesheet" href="../../lang-modal.css">
 </head>
 <body>
   <div class="legal-wrap">
@@ -18,16 +19,6 @@
           <div class="logo"><a href="../"><img src="../../icon.png" alt="Frisk" width="32" height="32">Frisk</a></div>
           <h1>Servicevilkår</h1>
           <p class="effective">Gælder fra: 21. marts 2026</p>
-        </div>
-        <div class="lang-rail">
-          <span class="lang-rail-label">Sprog</span>
-          <nav class="lang-switcher" aria-label="Sprog">
-            <a href="../en/terms/" lang="en"><span class="lang-native">English</span><span class="lang-code" aria-hidden="true">EN</span></a>
-            <a href="../sv/terms/" lang="sv"><span class="lang-native">Svenska</span><span class="lang-code" aria-hidden="true">SV</span></a>
-            <a href="../no/terms/" lang="no"><span class="lang-native">Norsk</span><span class="lang-code" aria-hidden="true">NO</span></a>
-            <a href="#" class="active" aria-current="true"><span class="lang-native">Dansk</span><span class="lang-code" aria-hidden="true">DA</span></a>
-            <a href="../fi/terms/" lang="fi"><span class="lang-native">Suomi</span><span class="lang-code" aria-hidden="true">FI</span></a>
-          </nav>
         </div>
       </div>
     </header>
@@ -76,7 +67,35 @@
         <span class="sep">·</span>
         <a href="../privacy/">Privatlivspolitik</a>
       </div>
+      <div class="legal-footer-lang">
+        <button type="button" class="lang-modal-trigger" id="lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
+          <span class="lang-modal-trigger-kicker">Sprog</span>
+          <span class="lang-modal-trigger-main">
+            <span class="lang-modal-trigger-value">Dansk</span>
+            <span class="lang-modal-trigger-code">DA</span>
+          </span>
+          <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
     </footer>
   </div>
+  <div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" hidden>
+    <div class="lang-modal-backdrop" data-lang-close tabindex="-1"></div>
+    <div class="lang-modal-panel">
+      <span class="lang-modal-handle" aria-hidden="true"></span>
+      <div class="lang-modal-header">
+        <h2 id="lang-modal-title" class="lang-modal-title">Sprog</h2>
+        <button type="button" class="lang-modal-close" data-lang-close aria-label="Luk">×</button>
+      </div>
+      <ul class="lang-modal-list" role="listbox" aria-label="Sprog">
+        <li role="none"><a href="../en/terms/" class="lang-modal-option" role="option" lang="en"><span class="lang-modal-native">English</span><span class="lang-modal-code">EN</span></a></li>
+        <li role="none"><a href="../sv/terms/" class="lang-modal-option" role="option" lang="sv"><span class="lang-modal-native">Svenska</span><span class="lang-modal-code">SV</span></a></li>
+        <li role="none"><a href="../no/terms/" class="lang-modal-option" role="option" lang="no"><span class="lang-modal-native">Norsk</span><span class="lang-modal-code">NO</span></a></li>
+        <li role="none"><div class="lang-modal-option is-current" role="option" aria-selected="true"><span class="lang-modal-native">Dansk</span><span class="lang-modal-code">DA</span></div></li>
+        <li role="none"><a href="../fi/terms/" class="lang-modal-option" role="option" lang="fi"><span class="lang-modal-native">Suomi</span><span class="lang-modal-code">FI</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="../../lang-modal.js"></script>
 </body>
 </html>
