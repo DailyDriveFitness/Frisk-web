@@ -19,97 +19,233 @@
 <body>
   <div class="site-wrap">
     <header class="site-header">
-      <div class="header-brand">
-        <div class="logo"><img src="../icon.png" alt="Frisk" width="48" height="48"><span>Frisk</span></div>
-        <p class="tagline">Henkilökohtainen terveysseuralaisesi</p>
+      <div class="header-bar">
+        <div class="header-brand-row">
+          <div class="header-brand-text">
+            <div class="logo"><img src="../icon.png" alt="Frisk" width="48" height="48"><span>Frisk</span></div>
+            <p class="tagline">Henkilökohtainen terveysseuralaisesi</p>
+          </div>
+        </div>
+        <div class="header-lang">
+          <button type="button" class="lang-modal-trigger lang-modal-trigger--header lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
+            <span class="lang-modal-trigger-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="lang-modal-trigger-kicker">Kieli</span>
+            <span class="lang-modal-trigger-main">
+              <span class="lang-modal-trigger-value">Suomi</span>
+              <span class="lang-modal-trigger-code">FI</span>
+            </span>
+            <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <h1 id="hero-title">Seuraa asioita jotka merkitsevät</h1>
-          <p class="hero-lead">Askeleet, ravitsemus, liikunta, paino, kipu ja muuta — kaikki yhdessä paikassa. Frisk auttaa sinua saavuttamaan terveyttä koskevat tavoitteesi selkeällä ja yksinkertaisella käyttöliittymällä.</p>
+          <p class="hero-kicker">Rauhallinen terveysseuranta</p>
+          <h1 id="hero-title">Terveytesi. Vihdoin yksinkertaista.</h1>
+          <p class="hero-lead">Kaikki olennainen — askeleet, ravitsemus, liikunta, paino, kipu ja muuta — yhdessä rauhallisessa päivänäkymässä. Frisk on rakennettu tavoille, ei täydellisyydelle: pysy tasaisena ilman stressiä.</p>
+          <p class="hero-sub">Synkronoi Apple Healthin ja Health Connectin kanssa, jotta kokonaiskuva pysyy koossa hiljaa ja turvallisesti.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#get-frisk">Lataa Frisk Google Playsta</a>
-          </div>
-          <p class="features-label" id="features-heading">Näin Frisk auttaa</p>
-          <div class="features" role="list" aria-labelledby="features-heading">
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4v6h6"/><path d="M12 20v-6H6"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Askeleet ja aktiviteetti</strong>
-                <span>Synkronoi Apple Healthin ja Health Connectin kanssa</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v11a2 2 0 0 0 4 0V7a2 2 0 0 1 4 0v11a2 2 0 0 0 4 0V7a4 4 0 0 0-4-4z"/><path d="M12 7v14"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Ravitsemus</strong>
-                <span>Kirjaa ateriat ja seuraa kaloreita</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Liikunta</strong>
-                <span>Tallenna harjoitukset ja rutiinit</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Tavoitteet</strong>
-                <span>Aseta tavoitteita ja seuraa edistymistäsi</span>
-              </div>
-            </article>
-          </div>
-          <div class="cta-panel" id="get-frisk">
-            <p class="cta-panel-label">Lataa</p>
-            <div class="store-badges">
-              <a href="https://play.google.com/store/apps/details?id=com.frisk.health" title="Get Frisk on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="155" height="60"></a>
-            </div>
+            <a class="btn btn-secondary" href="#features-prologue">Tutustu ominaisuuksiin</a>
           </div>
         </div>
       </section>
 
-      <!-- Kuvakaappaukset: tallenna tiedostot ../images/showcase-1.png jne. ja poista kommentti <img>-riveiltä jokaisessa .showcase-frame -->
-      <section class="showcase" aria-labelledby="showcase-title">
+      <div class="features-prologue" id="features-prologue">
+        <p class="features-label" id="features-heading">Näin Frisk auttaa</p>
+        <p class="section-lead">Yksi paikka kirjata, katsoa taaksepäin ja jatkaa — tilaa hengittää.</p>
+      </div>
+      <div class="features" role="list" aria-labelledby="features-heading">
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4v6h6"/><path d="M12 20v-6H6"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Askeleet ja aktiviteetti</strong>
+            <span>Synkronoi Apple Healthin ja Health Connectin kanssa</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v11a2 2 0 0 0 4 0V7a2 2 0 0 1 4 0v11a2 2 0 0 0 4 0V7a4 4 0 0 0-4-4z"/><path d="M12 7v14"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Ravitsemus</strong>
+            <span>Kirjaa ateriat ja seuraa kaloreita</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Liikunta</strong>
+            <span>Tallenna harjoitukset ja rutiinit</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Tavoitteet</strong>
+            <span>Aseta tavoitteita ja seuraa edistymistäsi</span>
+          </div>
+        </article>
+      </div>
+
+      <section class="section trust" aria-labelledby="trust-title">
+        <header class="section-header">
+          <p class="section-eyebrow">Luottamus &amp; yksityisyys</p>
+          <h2 id="trust-title" class="section-title">Tietosi pysyvät sinun</h2>
+          <p class="section-lead">Frisk on yksityisyyttä kunnioittava ja tukeva — terveysdataa käsitellään huolella, ilman melua.</p>
+        </header>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-item-sub">Omistajuus</span>
+            <h3>Sinä päätät</h3>
+            <p>Tietosi pysyvät sinun. Näemme ne henkilökohtaisena, ei tuotteena.</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item-sub">Tarkoitus</span>
+            <h3>Hellävarainen käsittely</h3>
+            <p>Terveysdataa käsitellään huolella — tallennetaan ja käsitellään, jotta sovellus toimii, ei jotta sinut hukuttaisi.</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item-sub">Rytmi</span>
+            <h3>Johdonmukaisuus ennen täydellisyyttä</h3>
+            <p>Rakennettu johdonmukaisuudelle, ei täydellisyydelle. Pienet, tasaiset askeleet voittavat paineen ja syyllisyyden.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="why-title">
+        <header class="section-header section-header--left">
+          <p class="section-eyebrow">Miksi Frisk</p>
+          <h2 id="why-title" class="section-title">Eri tavalla suunniteltu</h2>
+          <p class="section-lead">Ei vain uusi äänekäs kojelauta — rauhallisempi tapa pitää terveys yhdessä paikassa.</p>
+        </header>
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>Rauhallinen kokemus</h3>
+            <p>Selkeä asettelu, lempeä rytmi ja vähemmän hälyä — jotta tarkistus tuntuu tukevalta, ei vaativalta.</p>
+          </div>
+          <div class="why-card">
+            <h3>Kaikki yhdessä</h3>
+            <p>Askeleet, ateriat, liikunta, tavoitteet ja muu samassa näkymässä — vähemmän sovelluksia, vähemmän kontekstin vaihtoa.</p>
+          </div>
+          <div class="why-card">
+            <h3>Toimii suurten terveysalustojen kanssa</h3>
+            <p>Apple Health ja Health Connect pitävät aktiviteetin ja signaalit linjassa ilman manuaalista säätöä.</p>
+          </div>
+          <div class="why-card">
+            <h3>Oikeaa elämää varten</h3>
+            <p>Päivä jäi väliin? Elämä tapahtuu. Frisk toivottaa takaisin ilman syyllistämistä.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="dayflow-title">
+        <header class="section-header">
+          <p class="section-eyebrow">Päivä Friskin kanssa</p>
+          <h2 id="dayflow-title" class="section-title">Sopii tavalliseen päivään</h2>
+          <p class="section-lead">Kevyet hetket — aamu, päivä, ilta — jotta seuranta ei vie tilaa.</p>
+        </header>
+        <div class="dayflow-steps">
+          <div class="dayflow-step">
+            <h3>Aamu</h3>
+            <p>Avaa yleiskuva ja näe edistyminen silmäyksellä — askeleet, unen konteksti ja mikä merkitsee tänään.</p>
+          </div>
+          <div class="dayflow-step">
+            <h3>Päivällä</h3>
+            <p>Kirjaa ateriat tai harjoitukset kun sopii. Nopeat merkinnät, ilman seremoniaa.</p>
+          </div>
+          <div class="dayflow-step">
+            <h3>Ilta</h3>
+            <p>Käy läpi tavat ja tavoitteet rauhassa — juhli johdonmukaisuutta, säädä lempeästi.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kuvakaappaukset: tallenna tiedostot ../images/showcase-1.png jne. ja poista kommentti <img>-riveiltä jokaisessa .phone-screen -->
+      <section class="showcase section" aria-labelledby="showcase-title">
         <header class="showcase-header">
           <p class="showcase-eyebrow">Sovelluksessa</p>
-          <h2 id="showcase-title" class="showcase-title">Frisk käytössä</h2>
-          <p class="showcase-intro">Rauhallinen kurkistus puhelimen käyttökokemukseen — lisää omat kuvakaappaukset, kun olet valmis.</p>
+          <h2 id="showcase-title" class="showcase-title">Muotoiltu selkeyteen puhelimessa</h2>
+          <p class="showcase-intro">Kehys tuotetarinallesi — lisää pystykuvakaappaukset (~390×844), kun olet valmis.</p>
         </header>
         <div class="showcase-grid">
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-1.png" alt="Frisk-sovellus — yleiskuva" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Kuvakaappaus 1</span></span>
+            <div class="showcase-device-wrap">
+              <div class="phone-chassis">
+                <div class="phone-screen">
+                  <!-- <img src="../images/showcase-1.png" alt="Frisk-sovellus — päivän yleiskuva" width="390" height="844" loading="lazy"> -->
+                  <span class="showcase-placeholder" aria-hidden="true">
+                    <span class="showcase-placeholder-mark"></span>
+                    <span class="showcase-placeholder-inner">Korvaa</span>
+                    <span class="showcase-placeholder-hint">Pysty · 390×844 · yleiskuva</span>
+                  </span>
+                </div>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Yleiskuva</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Päivän yleiskuva</span>
+              <span class="showcase-caption">Yksi silmäys askeleisiin, aktiviteettiin ja päivän tunteeseen.</span>
+            </figcaption>
           </figure>
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-2.png" alt="Frisk-sovellus — seuranta" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Kuvakaappaus 2</span></span>
+            <div class="showcase-device-wrap">
+              <div class="phone-chassis">
+                <div class="phone-screen">
+                  <!-- <img src="../images/showcase-2.png" alt="Frisk-sovellus — kirjaus" width="390" height="844" loading="lazy"> -->
+                  <span class="showcase-placeholder" aria-hidden="true">
+                    <span class="showcase-placeholder-mark"></span>
+                    <span class="showcase-placeholder-inner">Korvaa</span>
+                    <span class="showcase-placeholder-hint">Pysty · 390×844 · kirjaus</span>
+                  </span>
+                </div>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Seuranta</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Kirjaa kevyesti</span>
+              <span class="showcase-caption">Ateriat ja treenit ilman kitkaa.</span>
+            </figcaption>
           </figure>
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-3.png" alt="Frisk-sovellus — tavoitteet" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Kuvakaappaus 3</span></span>
+            <div class="showcase-device-wrap">
+              <div class="phone-chassis">
+                <div class="phone-screen">
+                  <!-- <img src="../images/showcase-3.png" alt="Frisk-sovellus — tavoitteet" width="390" height="844" loading="lazy"> -->
+                  <span class="showcase-placeholder" aria-hidden="true">
+                    <span class="showcase-placeholder-mark"></span>
+                    <span class="showcase-placeholder-inner">Korvaa</span>
+                    <span class="showcase-placeholder-hint">Pysty · 390×844 · tavoitteet</span>
+                  </span>
+                </div>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Tavoitteet</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Tavoitteet hengittävät</span>
+              <span class="showcase-caption">Edistyminen, jota jaksat ylläpitää — ei jahtaa.</span>
+            </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="closing-cta section" aria-labelledby="closing-title">
+        <div class="closing-cta-inner">
+          <h2 id="closing-title">Aloita rauhallisempi rutiini</h2>
+          <p class="section-lead">Lataa Frisk Google Playsta ja pidä kaikki olennainen yhdessä hiljaisessa paikassa — omaan tahtiisi, omilla ehdoillasi.</p>
+          <div class="cta-panel" id="get-frisk">
+            <p class="cta-panel-label">Google Play</p>
+            <p class="cta-panel-note">Asenna yhdellä napilla. Ei melua, ei painetta — vain tasaisempi tapa seurata.</p>
+            <div class="store-badges">
+              <a href="https://play.google.com/store/apps/details?id=com.frisk.health" title="Lataa Frisk Google Playsta"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Hae se Google Playsta" width="155" height="60"></a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -120,28 +256,38 @@
     </main>
 
     <footer class="site-footer">
-      <div class="footer-grid">
-        <div>
-          <p class="footer-meta"><strong>© 2026 Frisk.</strong> Kaikki oikeudet pidätetään.</p>
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <div class="logo"><img src="../icon.png" alt="" width="40" height="40" aria-hidden="true"><span>Frisk</span></div>
+          <p class="footer-tagline">Terveysseurantaa, joka tuntuu rauhalliselta, selkeältä ja kunnioittavalta tietojasi kohtaan.</p>
         </div>
-        <div>
-          <p class="footer-block-title">Tutustu</p>
-          <div class="footer-links">
-            <a href="terms/">Ehdot</a>
-            <a href="privacy/">Tietosuoja</a>
-            <a href="mailto:support@frisk-app.com">Yhteystiedot</a>
+        <div class="footer-columns">
+          <div>
+            <p class="footer-col-title">Sivusto</p>
+            <div class="footer-links">
+              <a href="terms/">Käyttöehdot</a>
+              <a href="privacy/">Tietosuojakäytäntö</a>
+              <a href="mailto:support@frisk-app.com">Yhteystiedot</a>
+            </div>
           </div>
-          <div class="footer-lang-modal">
-            <button type="button" class="lang-modal-trigger" id="lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
-              <span class="lang-modal-trigger-kicker">Kieli</span>
-              <span class="lang-modal-trigger-main">
-                <span class="lang-modal-trigger-value">Suomi</span>
-                <span class="lang-modal-trigger-code">FI</span>
-              </span>
-              <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
+          <div>
+            <p class="footer-col-title">Kieli</p>
+            <div class="footer-lang-modal">
+              <button type="button" class="lang-modal-trigger lang-modal-trigger--footer lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
+                <span class="lang-modal-trigger-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                <span class="lang-modal-trigger-kicker">Kieli</span>
+                <span class="lang-modal-trigger-main">
+                  <span class="lang-modal-trigger-value">Suomi</span>
+                  <span class="lang-modal-trigger-code">FI</span>
+                </span>
+                <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-meta"><strong>© 2026 Frisk.</strong> Kaikki oikeudet pidätetään.</p>
       </div>
     </footer>
   </div>

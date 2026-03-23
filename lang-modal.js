@@ -1,11 +1,12 @@
 (function () {
-  var openBtn = document.getElementById("lang-modal-open");
+  var openBtns = document.querySelectorAll(".lang-modal-open");
   var modal = document.getElementById("lang-modal");
-  if (!openBtn || !modal) return;
+  if (!openBtns.length || !modal) return;
 
   var backdrop = modal.querySelector(".lang-modal-backdrop");
   var closeBtns = modal.querySelectorAll("[data-lang-close]");
   var panel = modal.querySelector(".lang-modal-panel");
+  var activeOpenBtn = null;
 
   function getFocusables() {
     if (!panel) return [];
@@ -20,10 +21,17 @@
       });
   }
 
-  function open() {
+  function setOpenState(isOpen) {
+    openBtns.forEach(function (btn) {
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      btn.classList.toggle("is-open", isOpen);
+    });
+  }
+
+  function open(fromBtn) {
+    activeOpenBtn = fromBtn && fromBtn.classList ? fromBtn : openBtns[0];
     modal.removeAttribute("hidden");
-    openBtn.setAttribute("aria-expanded", "true");
-    openBtn.classList.add("is-open");
+    setOpenState(true);
     document.body.style.overflow = "hidden";
     var focusables = getFocusables();
     var first = focusables[0];
@@ -32,15 +40,20 @@
 
   function close() {
     modal.setAttribute("hidden", "");
-    openBtn.setAttribute("aria-expanded", "false");
-    openBtn.classList.remove("is-open");
+    setOpenState(false);
     document.body.style.overflow = "";
-    openBtn.focus();
+    if (activeOpenBtn && typeof activeOpenBtn.focus === "function") {
+      activeOpenBtn.focus();
+    } else if (openBtns[0]) {
+      openBtns[0].focus();
+    }
   }
 
-  openBtn.addEventListener("click", function () {
-    if (modal.hasAttribute("hidden")) open();
-    else close();
+  openBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (modal.hasAttribute("hidden")) open(btn);
+      else close();
+    });
   });
 
   if (backdrop) backdrop.addEventListener("click", close);
