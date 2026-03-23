@@ -19,97 +19,220 @@
 <body>
   <div class="site-wrap">
     <header class="site-header">
-      <div class="header-brand">
-        <div class="logo"><img src="../icon.png" alt="Frisk" width="48" height="48"><span>Frisk</span></div>
-        <p class="tagline">Din personlige helsekompanjong</p>
+      <div class="header-bar">
+        <div class="header-brand-row">
+          <div class="header-brand-text">
+            <div class="logo"><img src="../icon.png" alt="Frisk" width="48" height="48"><span>Frisk</span></div>
+            <p class="tagline">Din personlige helsekompanjong</p>
+          </div>
+        </div>
+        <div class="header-lang">
+          <button type="button" class="lang-modal-trigger lang-modal-trigger--header lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
+            <span class="lang-modal-trigger-kicker">Språk</span>
+            <span class="lang-modal-trigger-main">
+              <span class="lang-modal-trigger-value">Norsk</span>
+              <span class="lang-modal-trigger-code">NO</span>
+            </span>
+            <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <h1 id="hero-title">Hold oversikt over det som betyr noe</h1>
-          <p class="hero-lead">Skritt, ernæring, trening, vekt, smerte og mer — alt på ett sted. Frisk hjelper deg med å nå helsemålene dine med et rent og enkelt grensesnitt.</p>
+          <p class="hero-kicker">Rolig helsesporing</p>
+          <h1 id="hero-title">Din helse. Endelig enkel.</h1>
+          <p class="hero-lead">Alt som betyr noe — skritt, ernæring, trening, vekt, smerte og mer — i én rolig daglig oversikt. Frisk er laget for vaner, ikke perfeksjon: hold jevnhet uten stress.</p>
+          <p class="hero-sub">Synkroniser med Apple Health og Health Connect så helhetsbildet henger sammen, stille og trygt.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#get-frisk">Last ned Frisk på Google Play</a>
-          </div>
-          <p class="features-label" id="features-heading">Dette får du til</p>
-          <div class="features" role="list" aria-labelledby="features-heading">
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4v6h6"/><path d="M12 20v-6H6"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Skritt &amp; aktivitet</strong>
-                <span>Synkroniser med Apple Health og Health Connect</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v11a2 2 0 0 0 4 0V7a2 2 0 0 1 4 0v11a2 2 0 0 0 4 0V7a4 4 0 0 0-4-4z"/><path d="M12 7v14"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Ernæring</strong>
-                <span>Logg måltider og følg kalorier</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Trening</strong>
-                <span>Registrer treningsøkter og rutiner</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Mål</strong>
-                <span>Sett mål og følg fremgangen din</span>
-              </div>
-            </article>
-          </div>
-          <div class="cta-panel" id="get-frisk">
-            <p class="cta-panel-label">Last ned</p>
-            <div class="store-badges">
-              <a href="https://play.google.com/store/apps/details?id=com.frisk.health" title="Get Frisk on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="155" height="60"></a>
-            </div>
+            <a class="btn btn-secondary" href="#features-prologue">Utforsk funksjoner</a>
           </div>
         </div>
       </section>
 
-      <!-- Skjermbilder: legg filer i ../images/showcase-1.png osv. og fjern kommentar fra <img> i hver .showcase-frame -->
-      <section class="showcase" aria-labelledby="showcase-title">
+      <div class="features-prologue" id="features-prologue">
+        <p class="features-label" id="features-heading">Dette får du til</p>
+        <p class="section-lead">Ett sted å loggføre, se tilbake og fortsette — med plass til å puste.</p>
+      </div>
+      <div class="features" role="list" aria-labelledby="features-heading">
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4v6h6"/><path d="M12 20v-6H6"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Skritt &amp; aktivitet</strong>
+            <span>Synkroniser med Apple Health og Health Connect</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v11a2 2 0 0 0 4 0V7a2 2 0 0 1 4 0v11a2 2 0 0 0 4 0V7a4 4 0 0 0-4-4z"/><path d="M12 7v14"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Ernæring</strong>
+            <span>Logg måltider og følg kalorier</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Trening</strong>
+            <span>Registrer treningsøkter og rutiner</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Mål</strong>
+            <span>Sett mål og følg fremgangen din</span>
+          </div>
+        </article>
+      </div>
+
+      <section class="section trust" aria-labelledby="trust-title">
+        <header class="section-header">
+          <p class="section-eyebrow">Tillit &amp; personvern</p>
+          <h2 id="trust-title" class="section-title">Dine data forblir dine</h2>
+          <p class="section-lead">Frisk er personvernbevisst og støttende — helsedata håndteres med omsorg, uten støy.</p>
+        </header>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <h3>Du har kontrollen</h3>
+            <p>Dine data forblir dine. Vi ser på dem som noe personlig, ikke som en vare.</p>
+          </div>
+          <div class="trust-item">
+            <h3>Håndteres med omsorg</h3>
+            <p>Helsedata håndteres med omsorg — lagres og behandles for at appen skal fungere, ikke for å overvelde deg.</p>
+          </div>
+          <div class="trust-item">
+            <h3>Konsekvens fremfor perfeksjon</h3>
+            <p>Bygget for konsekvens, ikke perfeksjon. Små, jevne steg slår press og dårlig samvittighet.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="why-title">
+        <header class="section-header section-header--left">
+          <p class="section-eyebrow">Hvorfor Frisk</p>
+          <h2 id="why-title" class="section-title">Annerledes fra bunnen av</h2>
+          <p class="section-lead">Ikke nok et høylytt dashbord — en roligere måte å samle helsen på ett sted.</p>
+        </header>
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>En rolig opplevelse</h3>
+            <p>Tydelig layout, myk rytme og lite støy — slik at innsjekk føles støttende, ikke krevende.</p>
+          </div>
+          <div class="why-card">
+            <h3>Alt på ett sted</h3>
+            <p>Skritt, måltider, trening, mål og mer samlet — færre apper, mindre kontekstbytte.</p>
+          </div>
+          <div class="why-card">
+            <h3>Fungerer med store helsesystemer</h3>
+            <p>Apple Health og Health Connect holder aktivitet og signaler på linje uten manuelt ekstraarbeid.</p>
+          </div>
+          <div class="why-card">
+            <h3>Designet for ekte liv</h3>
+            <p>Går du glipp av en dag? Livet skjer. Frisk ønsker deg velkommen tilbake uten pekefinger.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="dayflow-title">
+        <header class="section-header">
+          <p class="section-eyebrow">En dag med Frisk</p>
+          <h2 id="dayflow-title" class="section-title">Passer hverdagens rytme</h2>
+          <p class="section-lead">Lette øyeblikk — morgen, dag, kveld — så sporingen aldri tar over.</p>
+        </header>
+        <div class="dayflow-steps">
+          <div class="dayflow-step">
+            <h3>Morgen</h3>
+            <p>Åpne oversikten og se fremgang med ett blikk — skritt, søvnkontekst og hva som teller i dag.</p>
+          </div>
+          <div class="dayflow-step">
+            <h3>Utover dagen</h3>
+            <p>Logg måltider eller trening når det passer. Raske registreringer, uten seremoni.</p>
+          </div>
+          <div class="dayflow-step">
+            <h3>Kveld</h3>
+            <p>Se over vaner og mål i ro — feir konsekvens, juster mykt.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skjermbilder: legg filer i ../images/showcase-1.png osv. og fjern kommentar fra <img> i hver .phone-screen -->
+      <section class="showcase section" aria-labelledby="showcase-title">
         <header class="showcase-header">
           <p class="showcase-eyebrow">I appen</p>
-          <h2 id="showcase-title" class="showcase-title">Se Frisk i bruk</h2>
-          <p class="showcase-intro">Et roligt innblikk i opplevelsen på telefonen — legg til egne skjermbilder når du er klar.</p>
+          <h2 id="showcase-title" class="showcase-title">Formet for klarhet på telefonen</h2>
+          <p class="showcase-intro">Ramme for produktfortellingen din — legg inn portrettskjermbilder (~390×844) når du er klar.</p>
         </header>
         <div class="showcase-grid">
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-1.png" alt="Frisk-appen — oversikt" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Skjermbilde 1</span></span>
+            <div class="phone-chassis">
+              <div class="phone-screen">
+                <!-- <img src="../images/showcase-1.png" alt="Frisk-appen — daglig oversikt" width="390" height="844" loading="lazy"> -->
+                <span class="showcase-placeholder" aria-hidden="true">
+                  <span class="showcase-placeholder-inner">Plassholder</span>
+                  <span class="showcase-placeholder-hint">Portrettskjermbilde · oversikt</span>
+                </span>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Oversikt</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Daglig oversikt</span>
+              <span class="showcase-caption">Ett blikk på skritt, aktivitet og hvordan dagen føles.</span>
+            </figcaption>
           </figure>
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-2.png" alt="Frisk-appen — sporing" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Skjermbilde 2</span></span>
+            <div class="phone-chassis">
+              <div class="phone-screen">
+                <!-- <img src="../images/showcase-2.png" alt="Frisk-appen — logging" width="390" height="844" loading="lazy"> -->
+                <span class="showcase-placeholder" aria-hidden="true">
+                  <span class="showcase-placeholder-inner">Plassholder</span>
+                  <span class="showcase-placeholder-hint">Portrettskjermbilde · logging</span>
+                </span>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Sporing</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Logg enkelt</span>
+              <span class="showcase-caption">Måltider og økter uten friksjon.</span>
+            </figcaption>
           </figure>
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-3.png" alt="Frisk-appen — mål" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Skjermbilde 3</span></span>
+            <div class="phone-chassis">
+              <div class="phone-screen">
+                <!-- <img src="../images/showcase-3.png" alt="Frisk-appen — mål" width="390" height="844" loading="lazy"> -->
+                <span class="showcase-placeholder" aria-hidden="true">
+                  <span class="showcase-placeholder-inner">Plassholder</span>
+                  <span class="showcase-placeholder-hint">Portrettskjermbilde · mål</span>
+                </span>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Mål</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Mål med pusterom</span>
+              <span class="showcase-caption">Fremgang du kan holde, ikke jage.</span>
+            </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="closing-cta section" aria-labelledby="closing-title">
+        <div class="closing-cta-inner">
+          <h2 id="closing-title">Start en roligere rutine</h2>
+          <p class="section-lead">Last ned Frisk på Google Play og samle alt som betyr noe på ett stille sted — i ditt tempo, på dine premisser.</p>
+          <div class="cta-panel" id="get-frisk">
+            <p class="cta-panel-label">Google Play</p>
+            <p class="cta-panel-note">Installer med ett trykk. Ikke støy, ikke press — bare en jevnere måte å følge med.</p>
+            <div class="store-badges">
+              <a href="https://play.google.com/store/apps/details?id=com.frisk.health" title="Last ned Frisk på Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Last ned på Google Play" width="155" height="60"></a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -120,28 +243,37 @@
     </main>
 
     <footer class="site-footer">
-      <div class="footer-grid">
-        <div>
-          <p class="footer-meta"><strong>© 2026 Frisk.</strong> Alle rettigheter reservert.</p>
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <div class="logo"><img src="../icon.png" alt="" width="40" height="40" aria-hidden="true"><span>Frisk</span></div>
+          <p class="footer-tagline">Helsesporing som føles rolig, tydelig og respektfull for dataene dine.</p>
         </div>
-        <div>
-          <p class="footer-block-title">Utforsk</p>
-          <div class="footer-links">
-            <a href="terms/">Vilkår</a>
-            <a href="privacy/">Personvern</a>
-            <a href="mailto:support@frisk-app.com">Kontakt</a>
+        <div class="footer-columns">
+          <div>
+            <p class="footer-col-title">Nettsted</p>
+            <div class="footer-links">
+              <a href="terms/">Brukervilkår</a>
+              <a href="privacy/">Personvernregler</a>
+              <a href="mailto:support@frisk-app.com">Kontakt</a>
+            </div>
           </div>
-          <div class="footer-lang-modal">
-            <button type="button" class="lang-modal-trigger" id="lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
-              <span class="lang-modal-trigger-kicker">Språk</span>
-              <span class="lang-modal-trigger-main">
-                <span class="lang-modal-trigger-value">Norsk</span>
-                <span class="lang-modal-trigger-code">NO</span>
-              </span>
-              <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
+          <div>
+            <p class="footer-col-title">Språk</p>
+            <div class="footer-lang-modal">
+              <button type="button" class="lang-modal-trigger lang-modal-trigger--footer lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
+                <span class="lang-modal-trigger-kicker">Språk</span>
+                <span class="lang-modal-trigger-main">
+                  <span class="lang-modal-trigger-value">Norsk</span>
+                  <span class="lang-modal-trigger-code">NO</span>
+                </span>
+                <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-meta"><strong>© 2026 Frisk.</strong> Alle rettigheter reservert.</p>
       </div>
     </footer>
   </div>

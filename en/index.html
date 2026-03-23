@@ -20,97 +20,220 @@
 <body>
   <div class="site-wrap">
     <header class="site-header">
-      <div class="header-brand">
-        <div class="logo"><img src="../icon.png" alt="Frisk" width="48" height="48"><span>Frisk</span></div>
-        <p class="tagline">Your personal health &amp; wellness companion</p>
+      <div class="header-bar">
+        <div class="header-brand-row">
+          <div class="header-brand-text">
+            <div class="logo"><img src="../icon.png" alt="Frisk" width="48" height="48"><span>Frisk</span></div>
+            <p class="tagline">Your personal health &amp; wellness companion</p>
+          </div>
+        </div>
+        <div class="header-lang">
+          <button type="button" class="lang-modal-trigger lang-modal-trigger--header lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
+            <span class="lang-modal-trigger-kicker">Language</span>
+            <span class="lang-modal-trigger-main">
+              <span class="lang-modal-trigger-value">English</span>
+              <span class="lang-modal-trigger-code">EN</span>
+            </span>
+            <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <h1 id="hero-title">Track what matters</h1>
-          <p class="hero-lead">Steps, nutrition, exercise, weight, pain, and more — all in one place. Frisk helps you stay on top of your health goals with a clean, simple interface.</p>
+          <p class="hero-kicker">Calm health tracking</p>
+          <h1 id="hero-title">Your health. Finally simple.</h1>
+          <p class="hero-lead">Everything that matters — steps, nutrition, exercise, weight, pain, and more — in one calm daily view. Frisk is built for habits, not perfection: stay consistent without stress.</p>
+          <p class="hero-sub">Sync with Apple Health and Health Connect so the picture stays complete, quietly.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#get-frisk">Get Frisk on Google Play</a>
-          </div>
-          <p class="features-label" id="features-heading">What you can do</p>
-          <div class="features" role="list" aria-labelledby="features-heading">
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4v6h6"/><path d="M12 20v-6H6"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Steps &amp; Activity</strong>
-                <span>Sync with Apple Health &amp; Health Connect</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v11a2 2 0 0 0 4 0V7a2 2 0 0 1 4 0v11a2 2 0 0 0 4 0V7a4 4 0 0 0-4-4z"/><path d="M12 7v14"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Nutrition</strong>
-                <span>Log meals and track calories</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Exercise</strong>
-                <span>Record workouts and routines</span>
-              </div>
-            </article>
-            <article class="feature" role="listitem">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-              </div>
-              <div class="feature-body">
-                <strong>Goals</strong>
-                <span>Set and track your progress</span>
-              </div>
-            </article>
-          </div>
-          <div class="cta-panel" id="get-frisk">
-            <p class="cta-panel-label">Download</p>
-            <div class="store-badges">
-              <a href="https://play.google.com/store/apps/details?id=com.frisk.health" title="Get Frisk on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="155" height="60"></a>
-            </div>
+            <a class="btn btn-secondary" href="#features-prologue">Explore features</a>
           </div>
         </div>
       </section>
 
-      <!-- Screenshots: add files at ../images/showcase-1.png (etc.) and uncomment <img> in each .showcase-frame -->
-      <section class="showcase" aria-labelledby="showcase-title">
+      <div class="features-prologue" id="features-prologue">
+        <p class="features-label" id="features-heading">What you can do</p>
+        <p class="section-lead">A single place to log, review, and keep going — with room to breathe.</p>
+      </div>
+      <div class="features" role="list" aria-labelledby="features-heading">
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4v6h6"/><path d="M12 20v-6H6"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Steps &amp; Activity</strong>
+            <span>Sync with Apple Health &amp; Health Connect</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v11a2 2 0 0 0 4 0V7a2 2 0 0 1 4 0v11a2 2 0 0 0 4 0V7a4 4 0 0 0-4-4z"/><path d="M12 7v14"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Nutrition</strong>
+            <span>Log meals and track calories</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Exercise</strong>
+            <span>Record workouts and routines</span>
+          </div>
+        </article>
+        <article class="feature" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="feature-body">
+            <strong>Goals</strong>
+            <span>Set and track your progress</span>
+          </div>
+        </article>
+      </div>
+
+      <section class="section trust" aria-labelledby="trust-title">
+        <header class="section-header">
+          <p class="section-eyebrow">Trust &amp; privacy</p>
+          <h2 id="trust-title" class="section-title">Your data stays yours</h2>
+          <p class="section-lead">Frisk is privacy-conscious and supportive — health information handled with care, without noise.</p>
+        </header>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <h3>You stay in control</h3>
+            <p>Your data stays yours. We treat it as something personal, not a product.</p>
+          </div>
+          <div class="trust-item">
+            <h3>Handled with care</h3>
+            <p>Health data is handled with care — stored and processed to run the app, not to overwhelm you.</p>
+          </div>
+          <div class="trust-item">
+            <h3>Consistency over perfection</h3>
+            <p>Built for consistency, not perfection. Small, steady steps beat pressure and guilt.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="why-title">
+        <header class="section-header section-header--left">
+          <p class="section-eyebrow">Why Frisk</p>
+          <h2 id="why-title" class="section-title">Different by design</h2>
+          <p class="section-lead">Not another noisy dashboard — a calmer way to keep your health story in one place.</p>
+        </header>
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>A calm experience</h3>
+            <p>Clear layout, gentle rhythm, and no clutter — so checking in feels supportive, not demanding.</p>
+          </div>
+          <div class="why-card">
+            <h3>Everything in one place</h3>
+            <p>Steps, meals, workouts, goals, and more live together — fewer apps, less context switching.</p>
+          </div>
+          <div class="why-card">
+            <h3>Works with major health ecosystems</h3>
+            <p>Apple Health and Health Connect help keep activity and vitals aligned without manual busywork.</p>
+          </div>
+          <div class="why-card">
+            <h3>Designed for real life</h3>
+            <p>Miss a day? Life happens. Frisk is built to welcome you back without judgment.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="dayflow-title">
+        <header class="section-header">
+          <p class="section-eyebrow">A day with Frisk</p>
+          <h2 id="dayflow-title" class="section-title">Fits the rhythm of an ordinary day</h2>
+          <p class="section-lead">Light touch moments — morning, midday, evening — so tracking never takes over.</p>
+        </header>
+        <div class="dayflow-steps">
+          <div class="dayflow-step">
+            <h3>Morning</h3>
+            <p>Open your overview and see progress at a glance — steps, sleep context, and what matters today.</p>
+          </div>
+          <div class="dayflow-step">
+            <h3>During the day</h3>
+            <p>Log meals or workouts when it suits you. Quick entries, no ceremony.</p>
+          </div>
+          <div class="dayflow-step">
+            <h3>Evening</h3>
+            <p>Review habits and goals in a quiet moment — celebrate consistency, adjust gently.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screenshots: add files at ../images/showcase-1.png (etc.) and uncomment <img> inside each .phone-screen -->
+      <section class="showcase section" aria-labelledby="showcase-title">
         <header class="showcase-header">
           <p class="showcase-eyebrow">Inside the app</p>
-          <h2 id="showcase-title" class="showcase-title">See Frisk in action</h2>
-          <p class="showcase-intro">A calm look at the experience on your phone — add your own screenshots when ready.</p>
+          <h2 id="showcase-title" class="showcase-title">Crafted for clarity on your phone</h2>
+          <p class="showcase-intro">Premium framing for your product story — drop in portrait screenshots (~390×844) when ready.</p>
         </header>
         <div class="showcase-grid">
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-1.png" alt="Frisk app — overview" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Screenshot 1</span></span>
+            <div class="phone-chassis">
+              <div class="phone-screen">
+                <!-- <img src="../images/showcase-1.png" alt="Frisk app — daily overview" width="390" height="844" loading="lazy"> -->
+                <span class="showcase-placeholder" aria-hidden="true">
+                  <span class="showcase-placeholder-inner">Placeholder</span>
+                  <span class="showcase-placeholder-hint">Portrait screenshot · overview</span>
+                </span>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Overview</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Daily overview</span>
+              <span class="showcase-caption">One glance at steps, activity, and how the day feels.</span>
+            </figcaption>
           </figure>
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-2.png" alt="Frisk app — tracking" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Screenshot 2</span></span>
+            <div class="phone-chassis">
+              <div class="phone-screen">
+                <!-- <img src="../images/showcase-2.png" alt="Frisk app — logging" width="390" height="844" loading="lazy"> -->
+                <span class="showcase-placeholder" aria-hidden="true">
+                  <span class="showcase-placeholder-inner">Placeholder</span>
+                  <span class="showcase-placeholder-hint">Portrait screenshot · logging</span>
+                </span>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Tracking</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Log with ease</span>
+              <span class="showcase-caption">Meals and workouts without friction.</span>
+            </figcaption>
           </figure>
           <figure class="showcase-card">
-            <div class="showcase-frame">
-              <!-- <img src="../images/showcase-3.png" alt="Frisk app — goals" width="390" height="844" loading="lazy"> -->
-              <span class="showcase-placeholder" aria-hidden="true"><span class="showcase-placeholder-inner">Screenshot 3</span></span>
+            <div class="phone-chassis">
+              <div class="phone-screen">
+                <!-- <img src="../images/showcase-3.png" alt="Frisk app — goals" width="390" height="844" loading="lazy"> -->
+                <span class="showcase-placeholder" aria-hidden="true">
+                  <span class="showcase-placeholder-inner">Placeholder</span>
+                  <span class="showcase-placeholder-hint">Portrait screenshot · goals</span>
+                </span>
+              </div>
             </div>
-            <figcaption class="showcase-caption">Goals</figcaption>
+            <figcaption class="showcase-caption-block">
+              <span class="showcase-caption-title">Goals that breathe</span>
+              <span class="showcase-caption">Progress you can sustain, not chase.</span>
+            </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="closing-cta section" aria-labelledby="closing-title">
+        <div class="closing-cta-inner">
+          <h2 id="closing-title">Begin a calmer routine</h2>
+          <p class="section-lead">Download Frisk on Google Play and keep everything that matters in one quiet place — at your pace, on your terms.</p>
+          <div class="cta-panel" id="get-frisk">
+            <p class="cta-panel-label">Google Play</p>
+            <p class="cta-panel-note">Install in a tap. No clutter, no pressure — just a steadier way to track.</p>
+            <div class="store-badges">
+              <a href="https://play.google.com/store/apps/details?id=com.frisk.health" title="Get Frisk on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="155" height="60"></a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -121,28 +244,37 @@
     </main>
 
     <footer class="site-footer">
-      <div class="footer-grid">
-        <div>
-          <p class="footer-meta"><strong>© 2026 Frisk.</strong> All rights reserved.</p>
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <div class="logo"><img src="../icon.png" alt="" width="40" height="40" aria-hidden="true"><span>Frisk</span></div>
+          <p class="footer-tagline">Health tracking that feels calm, clear, and respectful of your data.</p>
         </div>
-        <div>
-          <p class="footer-block-title">Explore</p>
-          <div class="footer-links">
-            <a href="terms/">Terms</a>
-            <a href="privacy/">Privacy</a>
-            <a href="mailto:support@frisk-app.com">Contact</a>
+        <div class="footer-columns">
+          <div>
+            <p class="footer-col-title">Site</p>
+            <div class="footer-links">
+              <a href="terms/">Terms of Service</a>
+              <a href="privacy/">Privacy Policy</a>
+              <a href="mailto:support@frisk-app.com">Contact</a>
+            </div>
           </div>
-          <div class="footer-lang-modal">
-            <button type="button" class="lang-modal-trigger" id="lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
-              <span class="lang-modal-trigger-kicker">Language</span>
-              <span class="lang-modal-trigger-main">
-                <span class="lang-modal-trigger-value">English</span>
-                <span class="lang-modal-trigger-code">EN</span>
-              </span>
-              <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
+          <div>
+            <p class="footer-col-title">Language</p>
+            <div class="footer-lang-modal">
+              <button type="button" class="lang-modal-trigger lang-modal-trigger--footer lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
+                <span class="lang-modal-trigger-kicker">Language</span>
+                <span class="lang-modal-trigger-main">
+                  <span class="lang-modal-trigger-value">English</span>
+                  <span class="lang-modal-trigger-code">EN</span>
+                </span>
+                <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-meta"><strong>© 2026 Frisk.</strong> All rights reserved.</p>
       </div>
     </footer>
   </div>
