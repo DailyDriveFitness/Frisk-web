@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../lang-modal.css">
 </head>
 <body>
   <div class="site-wrap">
@@ -23,23 +23,6 @@
         <div class="logo"><img src="../icon.png" alt="Frisk" width="48" height="48"><span>Frisk</span></div>
         <p class="tagline">Din personlige sundhedskompanjon</p>
       </div>
-      <div class="lang-rail">
-        <span class="lang-rail-label">Sprog</span>
-        <nav class="lang-switcher" aria-label="Sprog">
-          <a href="../en/" lang="en"><span class="lang-native">English</span><span class="lang-code" aria-hidden="true">EN</span></a>
-          <a href="../sv/" lang="sv"><span class="lang-native">Svenska</span><span class="lang-code" aria-hidden="true">SV</span></a>
-          <a href="../no/" lang="no"><span class="lang-native">Norsk</span><span class="lang-code" aria-hidden="true">NO</span></a>
-          <a href="#" class="active" aria-current="true"><span class="lang-native">Dansk</span><span class="lang-code" aria-hidden="true">DA</span></a>
-          <a href="../fi/" lang="fi"><span class="lang-native">Suomi</span><span class="lang-code" aria-hidden="true">FI</span></a>
-        </nav>
-      </div>
-      <nav class="lang-switcher" aria-label="Sprog">
-        <a href="../en/" lang="en">EN</a>
-        <a href="../sv/" lang="sv">SV</a>
-        <a href="../no/" lang="no">NO</a>
-        <a href="#" class="active" aria-current="true">DA</a>
-        <a href="../fi/" lang="fi">FI</a>
-      </nav>
     </header>
 
     <main>
@@ -53,8 +36,6 @@
           <p class="features-label" id="features-heading">Sådan hjælper Frisk</p>
           <div class="features" role="list" aria-labelledby="features-heading">
             <article class="feature" role="listitem">
-          <div class="features">
-            <article class="feature">
               <div class="feature-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4v6h6"/><path d="M12 20v-6H6"/><circle cx="12" cy="12" r="3"/></svg>
               </div>
@@ -64,7 +45,6 @@
               </div>
             </article>
             <article class="feature" role="listitem">
-            <article class="feature">
               <div class="feature-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v11a2 2 0 0 0 4 0V7a2 2 0 0 1 4 0v11a2 2 0 0 0 4 0V7a4 4 0 0 0-4-4z"/><path d="M12 7v14"/></svg>
               </div>
@@ -74,7 +54,6 @@
               </div>
             </article>
             <article class="feature" role="listitem">
-            <article class="feature">
               <div class="feature-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
               </div>
@@ -84,7 +63,6 @@
               </div>
             </article>
             <article class="feature" role="listitem">
-            <article class="feature">
               <div class="feature-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
               </div>
@@ -121,26 +99,38 @@
             <a href="privacy/">Privatliv</a>
             <a href="mailto:support@frisk-app.com">Kontakt</a>
           </div>
-          <p class="footer-block-title footer-lang-heading">Sprog</p>
-          <div class="footer-lang-wrap">
-            <nav class="lang-switcher" aria-label="Sprog">
-              <a href="../en/" lang="en"><span class="lang-native">English</span><span class="lang-code" aria-hidden="true">EN</span></a>
-              <a href="../sv/" lang="sv"><span class="lang-native">Svenska</span><span class="lang-code" aria-hidden="true">SV</span></a>
-              <a href="../no/" lang="no"><span class="lang-native">Norsk</span><span class="lang-code" aria-hidden="true">NO</span></a>
-              <a href="#" class="active" aria-current="true"><span class="lang-native">Dansk</span><span class="lang-code" aria-hidden="true">DA</span></a>
-              <a href="../fi/" lang="fi"><span class="lang-native">Suomi</span><span class="lang-code" aria-hidden="true">FI</span></a>
-            </nav>
-          <p class="footer-block-title" style="margin-top: 1.25rem;">Sprog</p>
-          <div class="footer-langs">
-            <a href="../en/" lang="en">EN</a>
-            <a href="../sv/" lang="sv">SV</a>
-            <a href="../no/" lang="no">NO</a>
-            <a href="#" class="active" aria-current="true">DA</a>
-            <a href="../fi/" lang="fi">FI</a>
+          <div class="footer-lang-modal">
+            <button type="button" class="lang-modal-trigger" id="lang-modal-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="lang-modal">
+              <span class="lang-modal-trigger-kicker">Sprog</span>
+              <span class="lang-modal-trigger-main">
+                <span class="lang-modal-trigger-value">Dansk</span>
+                <span class="lang-modal-trigger-code">DA</span>
+              </span>
+              <svg class="lang-modal-trigger-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
           </div>
         </div>
       </div>
     </footer>
   </div>
+
+  <div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" hidden>
+    <div class="lang-modal-backdrop" data-lang-close tabindex="-1"></div>
+    <div class="lang-modal-panel">
+      <span class="lang-modal-handle" aria-hidden="true"></span>
+      <div class="lang-modal-header">
+        <h2 id="lang-modal-title" class="lang-modal-title">Sprog</h2>
+        <button type="button" class="lang-modal-close" data-lang-close aria-label="Luk">×</button>
+      </div>
+      <ul class="lang-modal-list" role="listbox" aria-label="Sprog">
+        <li role="none"><a href="../en/" class="lang-modal-option" role="option" lang="en"><span class="lang-modal-native">English</span><span class="lang-modal-code">EN</span></a></li>
+        <li role="none"><a href="../sv/" class="lang-modal-option" role="option" lang="sv"><span class="lang-modal-native">Svenska</span><span class="lang-modal-code">SV</span></a></li>
+        <li role="none"><a href="../no/" class="lang-modal-option" role="option" lang="no"><span class="lang-modal-native">Norsk</span><span class="lang-modal-code">NO</span></a></li>
+        <li role="none"><div class="lang-modal-option is-current" role="option" aria-selected="true"><span class="lang-modal-native">Dansk</span><span class="lang-modal-code">DA</span></div></li>
+        <li role="none"><a href="../fi/" class="lang-modal-option" role="option" lang="fi"><span class="lang-modal-native">Suomi</span><span class="lang-modal-code">FI</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="../lang-modal.js"></script>
 </body>
 </html>
