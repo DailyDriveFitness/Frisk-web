@@ -27,7 +27,7 @@
         observer.unobserve(entry.target);
       });
     },
-    { root: null, rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+    { root: null, rootMargin: "0px 0px -6% 0px", threshold: 0.06 }
   );
 
   nodes.forEach(function (el) {

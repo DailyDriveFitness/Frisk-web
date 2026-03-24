@@ -111,6 +111,36 @@ body::before {
   padding: var(--s-7) var(--s-5) calc(var(--s-10) + var(--s-3));
 }
 
+/* Subtle alternating bands behind main content (full-bleed within padded wrap) */
+.content-band {
+  margin-left: calc(-1 * var(--s-5));
+  margin-right: calc(-1 * var(--s-5));
+  padding-left: var(--s-5);
+  padding-right: var(--s-5);
+  border-radius: calc(var(--radius-2xl) + 4px);
+}
+
+@media (min-width: 640px) {
+  .content-band {
+    margin-left: calc(-1 * var(--s-6));
+    margin-right: calc(-1 * var(--s-6));
+    padding-left: var(--s-6);
+    padding-right: var(--s-6);
+  }
+}
+
+.content-band--a {
+  background:
+    linear-gradient(180deg, rgba(12, 18, 30, 0.55) 0%, rgba(6, 8, 13, 0.08) 55%, transparent 100%),
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(139, 124, 240, 0.06), transparent 60%);
+}
+
+.content-band--b {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.42) 0%, rgba(6, 8, 13, 0.04) 50%, transparent 100%),
+    radial-gradient(ellipse 65% 38% at 20% 0%, rgba(45, 212, 191, 0.05), transparent 55%);
+}
+
 @media (min-width: 640px) {
   .site-wrap {
     padding: var(--s-8) var(--s-6) calc(var(--s-11) + var(--s-2));
@@ -449,15 +479,19 @@ main > .hero:first-child {
 
 .hero-device-glow {
   position: absolute;
-  width: min(100%, 22rem);
-  height: min(100%, 32rem);
-  max-height: 70vh;
+  width: min(118%, 30rem);
+  height: min(108%, 40rem);
+  max-height: 78vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background:
-    radial-gradient(ellipse at 50% 45%, rgba(139, 124, 240, 0.45) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 60%, rgba(45, 212, 191, 0.22) 0%, transparent 45%);
-  filter: blur(36px);
-  opacity: 0.85;
+    radial-gradient(ellipse at 50% 42%, rgba(139, 124, 240, 0.52) 0%, transparent 58%),
+    radial-gradient(ellipse at 28% 58%, rgba(45, 212, 191, 0.28) 0%, transparent 48%),
+    radial-gradient(ellipse at 78% 62%, rgba(108, 92, 231, 0.22) 0%, transparent 42%);
+  filter: blur(48px);
+  opacity: 0.92;
   pointer-events: none;
   z-index: 0;
 }
@@ -466,15 +500,39 @@ main > .hero:first-child {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 17.5rem;
+  max-width: 22.5rem;
   margin: 0 auto;
   padding-bottom: var(--s-6);
+  animation: hero-device-float 6.5s var(--ease-soft) infinite;
+  will-change: transform;
 }
 
 @media (min-width: 960px) {
   .hero-device-wrap {
-    max-width: 19rem;
+    max-width: 25rem;
     margin: 0 auto 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-device-wrap {
+    max-width: 27rem;
+  }
+}
+
+@keyframes hero-device-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-device-wrap {
+    animation: none;
   }
 }
 
@@ -492,7 +550,7 @@ main > .hero:first-child {
 }
 
 .phone-frame--hero .phone-screen {
-  max-height: min(62vh, 32rem);
+  max-height: min(72vh, 40rem);
 }
 
 .btn {
@@ -785,6 +843,73 @@ main > .hero:first-child {
   line-height: 1.45;
 }
 
+/* Trust — product highlights (sync, tracking, simplicity) */
+.trust-highlights {
+  list-style: none;
+  display: grid;
+  gap: var(--s-3);
+  margin-top: var(--s-7);
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .trust-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-3) var(--s-5);
+    max-width: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .trust-highlights {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.trust-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  padding: var(--s-4) var(--s-4);
+  border-radius: var(--radius-lg);
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid var(--border-hairline);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  font-weight: 450;
+  transition: border-color 0.28s var(--ease-soft), box-shadow 0.32s var(--ease-out), transform 0.32s var(--ease-out);
+}
+
+.trust-highlights-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(45, 212, 191, 0.12) 0%, rgba(108, 92, 231, 0.14) 100%);
+  border: 1px solid var(--border-hairline);
+  color: var(--accent-teal);
+}
+
+.trust-highlights-icon svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+@media (hover: hover) {
+  .trust-highlights li:hover {
+    border-color: rgba(139, 124, 240, 0.24);
+    box-shadow: 0 18px 44px -28px rgba(0, 0, 0, 0.45);
+    transform: translateY(-3px);
+  }
+}
+
 @media (min-width: 720px) {
   .trust-proof {
     flex-wrap: nowrap;
@@ -977,7 +1102,7 @@ main > .hero:first-child {
 
 @media (min-width: 900px) {
   .app-showcase-section {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
     gap: var(--s-10);
     padding: var(--s-10) var(--s-9);
   }
@@ -988,6 +1113,10 @@ main > .hero:first-child {
 
   .app-showcase-section--flip > * {
     direction: ltr;
+  }
+
+  .app-showcase-section--flip .app-showcase-visual-block {
+    align-items: center;
   }
 }
 
@@ -1014,7 +1143,7 @@ main > .hero:first-child {
   line-height: 1.72;
   color: var(--text-secondary);
   font-weight: 450;
-  margin-bottom: var(--s-6);
+  margin-bottom: 0;
 }
 
 .app-showcase-bullets {
@@ -1045,6 +1174,35 @@ main > .hero:first-child {
   box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.12);
 }
 
+.app-showcase-visual-block {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--s-7);
+  width: 100%;
+}
+
+.app-showcase-bullets--below {
+  margin: 0;
+  max-width: 26rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 900px) {
+  .app-showcase-bullets--below {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .app-showcase-section--flip .app-showcase-bullets--below {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .app-showcase-visual {
   display: flex;
   flex-direction: column;
@@ -1067,7 +1225,7 @@ main > .hero:first-child {
 .app-showcase-device-wrap {
   position: relative;
   width: 100%;
-  max-width: 18.5rem;
+  max-width: 22rem;
   flex-shrink: 0;
   padding-bottom: 0;
   z-index: 1;
@@ -1075,19 +1233,19 @@ main > .hero:first-child {
 
 @media (min-width: 1200px) {
   .app-showcase-device-wrap {
-    max-width: 19.5rem;
+    max-width: 24rem;
   }
 }
 
 .app-showcase-glow {
   position: absolute;
-  inset: -14% -10% -12%;
+  inset: -18% -12% -14%;
   border-radius: 50%;
   background:
-    radial-gradient(ellipse at 50% 45%, rgba(139, 124, 240, 0.24) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 70%, rgba(45, 212, 191, 0.14) 0%, transparent 42%);
-  filter: blur(34px);
-  opacity: 0.95;
+    radial-gradient(ellipse at 50% 45%, rgba(139, 124, 240, 0.3) 0%, transparent 55%),
+    radial-gradient(ellipse at 30% 70%, rgba(45, 212, 191, 0.18) 0%, transparent 42%);
+  filter: blur(40px);
+  opacity: 0.98;
   pointer-events: none;
   z-index: 0;
 }
@@ -1146,7 +1304,7 @@ main > .hero:first-child {
   position: relative;
   width: 100%;
   aspect-ratio: 390 / 844;
-  max-height: min(52vh, 26rem);
+  max-height: min(58vh, 32rem);
   border-radius: 30px;
   background: #0b0e14;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1252,8 +1410,8 @@ main > .hero:first-child {
   opacity: 0;
   transform: translateY(1.25rem);
   transition:
-    opacity 0.7s var(--ease-out),
-    transform 0.75s var(--ease-out);
+    opacity 0.75s var(--ease-out),
+    transform 0.8s var(--ease-out);
 }
 
 .reveal-on-scroll.is-revealed {
@@ -1261,8 +1419,57 @@ main > .hero:first-child {
   transform: translateY(0);
 }
 
+.app-showcase-section .app-showcase-visual-block.reveal-on-scroll {
+  transition-delay: 0.12s;
+}
+
+.features .feature:nth-child(1) {
+  transition-delay: 0.04s;
+}
+.features .feature:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.features .feature:nth-child(3) {
+  transition-delay: 0.16s;
+}
+.features .feature:nth-child(4) {
+  transition-delay: 0.22s;
+}
+
+.features .feature.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(1.1rem);
+  transition:
+    opacity 0.72s var(--ease-out),
+    transform 0.78s var(--ease-out),
+    border-color 0.3s var(--ease-soft),
+    box-shadow 0.3s var(--ease-soft);
+}
+
+.features .feature.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .app-showcase-section .app-showcase-visual-block.reveal-on-scroll {
+    transition-delay: 0s;
+  }
+
+  .features .feature:nth-child(1),
+  .features .feature:nth-child(2),
+  .features .feature:nth-child(3),
+  .features .feature:nth-child(4) {
+    transition-delay: 0s;
+  }
+
+  .features .feature.reveal-on-scroll {
     opacity: 1;
     transform: none;
     transition: none;
@@ -1771,7 +1978,8 @@ main > .hero:first-child {
   .feature,
   .footer-block,
   .btn,
-  .footer-links a {
+  .footer-links a,
+  .trust-highlights li {
     transition: none !important;
     transform: none !important;
   }
