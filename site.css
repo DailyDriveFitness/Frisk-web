@@ -217,7 +217,7 @@ body::before {
 .logo img {
   width: 44px;
   height: 44px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: var(--radius-md);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--border-hairline);
 }
@@ -1246,7 +1246,11 @@ main > .hero:first-child {
 .app-showcase-device-wrap {
   position: relative;
   width: 100%;
+<<<<<<< HEAD
   max-width: 19rem;
+=======
+  max-width: 20.5rem;
+>>>>>>> 0f60f8ca4ad6adb9b27530a5060960e0b364d953
   flex-shrink: 0;
   padding-bottom: 0;
   z-index: 1;
@@ -1254,12 +1258,17 @@ main > .hero:first-child {
 
 @media (min-width: 1200px) {
   .app-showcase-device-wrap {
+<<<<<<< HEAD
     max-width: 20rem;
+=======
+    max-width: 22rem;
+>>>>>>> 0f60f8ca4ad6adb9b27530a5060960e0b364d953
   }
 }
 
 .app-showcase-glow {
   position: absolute;
+<<<<<<< HEAD
   inset: -12% -8% -10%;
   border-radius: 50%;
   background:
@@ -1267,6 +1276,15 @@ main > .hero:first-child {
     radial-gradient(ellipse at 35% 70%, rgba(45, 212, 191, 0.10) 0%, transparent 38%);
   filter: blur(28px);
   opacity: 0.78;
+=======
+  inset: -16% -10% -12%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(139, 124, 240, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 30% 70%, rgba(45, 212, 191, 0.14) 0%, transparent 42%);
+  filter: blur(34px);
+  opacity: 0.9;
+>>>>>>> 0f60f8ca4ad6adb9b27530a5060960e0b364d953
   pointer-events: none;
   z-index: 0;
 }
@@ -1274,6 +1292,7 @@ main > .hero:first-child {
 .app-showcase-device-wrap::after {
   content: "";
   position: absolute;
+<<<<<<< HEAD
   left: 18%;
   right: 18%;
   bottom: -6px;
@@ -1281,6 +1300,15 @@ main > .hero:first-child {
   border-radius: 50%;
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.28) 0%, transparent 72%);
   filter: blur(10px);
+=======
+  left: 16%;
+  right: 16%;
+  bottom: -6px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.32) 0%, transparent 72%);
+  filter: blur(12px);
+>>>>>>> 0f60f8ca4ad6adb9b27530a5060960e0b364d953
   z-index: 0;
 }
 
@@ -1292,6 +1320,7 @@ main > .hero:first-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   padding: 3px;
   border-radius: 36px;
   background: linear-gradient(180deg, #161b24 0%, #0b1119 100%);
@@ -1315,6 +1344,18 @@ main > .hero:first-child {
   background: linear-gradient(180deg, rgba(6, 10, 15, 0.98) 0%, rgba(15, 20, 28, 0.98) 100%);
   box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
   z-index: 3;
+=======
+  padding: 6px;
+  border-radius: 34px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.03) 18%, transparent 40%),
+    linear-gradient(168deg, #1b2432 0%, #101827 45%, #070c15 100%);
+  box-shadow:
+    0 32px 60px -34px rgba(0, 0, 0, 0.7),
+    0 14px 30px -18px rgba(108, 92, 231, 0.16),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.28) inset;
+>>>>>>> 0f60f8ca4ad6adb9b27530a5060960e0b364d953
 }
 
 .phone-chassis::after {
@@ -1350,8 +1391,13 @@ main > .hero:first-child {
   max-height: var(--phone-screen-max-h);
   height: auto;
   margin-inline: auto;
+<<<<<<< HEAD
   border-radius: 33px;
   background: #0a0e13;
+=======
+  border-radius: 28px;
+  background: #0b0e14;
+>>>>>>> 0f60f8ca4ad6adb9b27530a5060960e0b364d953
   overflow: hidden;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.025) inset,
