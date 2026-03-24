@@ -1246,7 +1246,7 @@ main > .hero:first-child {
 .app-showcase-device-wrap {
   position: relative;
   width: 100%;
-  max-width: 22rem;
+  max-width: 19rem;
   flex-shrink: 0;
   padding-bottom: 0;
   z-index: 1;
@@ -1254,19 +1254,19 @@ main > .hero:first-child {
 
 @media (min-width: 1200px) {
   .app-showcase-device-wrap {
-    max-width: 24rem;
+    max-width: 20rem;
   }
 }
 
 .app-showcase-glow {
   position: absolute;
-  inset: -18% -12% -14%;
+  inset: -12% -8% -10%;
   border-radius: 50%;
   background:
-    radial-gradient(ellipse at 50% 45%, rgba(139, 124, 240, 0.3) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 70%, rgba(45, 212, 191, 0.18) 0%, transparent 42%);
-  filter: blur(40px);
-  opacity: 0.98;
+    radial-gradient(ellipse at 50% 45%, rgba(108, 92, 231, 0.16) 0%, transparent 52%),
+    radial-gradient(ellipse at 35% 70%, rgba(45, 212, 191, 0.10) 0%, transparent 38%);
+  filter: blur(28px);
+  opacity: 0.78;
   pointer-events: none;
   z-index: 0;
 }
@@ -1274,13 +1274,13 @@ main > .hero:first-child {
 .app-showcase-device-wrap::after {
   content: "";
   position: absolute;
-  left: 14%;
-  right: 14%;
-  bottom: -8px;
-  height: 24px;
+  left: 18%;
+  right: 18%;
+  bottom: -6px;
+  height: 16px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.42) 0%, transparent 72%);
-  filter: blur(14px);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.28) 0%, transparent 72%);
+  filter: blur(10px);
   z-index: 0;
 }
 
@@ -1292,55 +1292,70 @@ main > .hero:first-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  border-radius: 38px;
-  background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 20%, transparent 40%),
-    linear-gradient(168deg, #1b2432 0%, #0f172a 42%, #060b14 100%);
+  padding: 3px;
+  border-radius: 36px;
+  background: linear-gradient(180deg, #161b24 0%, #0b1119 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow:
-    0 36px 72px -36px rgba(0, 0, 0, 0.72),
-    0 16px 36px -20px rgba(108, 92, 231, 0.18),
-    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-    0 -1px 0 rgba(0, 0, 0, 0.28) inset;
+    0 30px 60px -34px rgba(0, 0, 0, 0.65),
+    0 10px 24px -16px rgba(108, 92, 231, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.35) inset;
 }
 
-.phone-chassis::before,
+.phone-chassis::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 28%;
+  height: 16px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(6, 10, 15, 0.98) 0%, rgba(15, 20, 28, 0.98) 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
+  z-index: 3;
+}
+
 .phone-chassis::after {
-  content: none;
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 35px;
+  pointer-events: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.03) inset;
 }
 
 @media (min-width: 900px) {
   .app-showcase-section .phone-chassis {
-    transform: rotate(-2deg);
+    transform: rotate(-1deg);
     transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
   }
 
   .app-showcase-section--flip .phone-chassis {
-    transform: rotate(2deg);
+    transform: rotate(1deg);
   }
 
   .app-showcase-section:hover .phone-chassis,
   .app-showcase-section--flip:hover .phone-chassis {
-    transform: rotate(0deg) translateY(-4px);
+    transform: rotate(0deg) translateY(-3px);
   }
 }
 
 .phone-screen {
   position: relative;
-  /* Lock portrait ratio; width capped so height never exceeds --phone-screen-max-h */
   aspect-ratio: 390 / 844;
   width: min(100%, calc(var(--phone-screen-max-h) * 390 / 844));
   max-width: 100%;
   max-height: var(--phone-screen-max-h);
   height: auto;
   margin-inline: auto;
-  border-radius: 30px;
-  background: #0b0e14;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 33px;
+  background: #0a0e13;
   overflow: hidden;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
-    0 16px 40px -24px rgba(0, 0, 0, 0.42);
+    0 0 0 1px rgba(255, 255, 255, 0.025) inset,
+    0 12px 30px -22px rgba(0, 0, 0, 0.5);
 }
 
 .phone-screen img {
@@ -1349,7 +1364,7 @@ main > .hero:first-child {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: top center;
 }
 
