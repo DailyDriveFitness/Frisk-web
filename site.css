@@ -1360,12 +1360,12 @@ main > .hero:first-child {
 
 .phone-screen img {
   position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
+  top: 0;
+  left: 50%;
   height: 100%;
+  width: auto;
+  transform: translateX(-50%) scale(1.02);
   object-fit: cover;
-  object-position: top center;
 }
 
 .phone-screen:has(img) .showcase-placeholder {
